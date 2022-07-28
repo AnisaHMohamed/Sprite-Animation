@@ -1,3 +1,8 @@
+let playerState = "ko"
+const dropdown = document.getElementById('animations')
+dropdown.addEventListener('change', (e) =>{
+    playerState = e.target.value;
+})
 const canvas =  document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 600;
@@ -7,7 +12,6 @@ const playerImage = new Image();
 playerImage.src ='./assets/shadow_dog.png'
 const spriteWidth = 575;
 const spriteHeight = 523;
-let playerState = "ko"
 let gameFrame = 0;
 const staggerFrame = 5; // higher stagger frame slower the animation
 const spriteAnimations = [];
@@ -49,7 +53,7 @@ const animationStates = [
         frames: 12
     }, 
     { 
-        name: "getHit",
+        name: "gethit",
         frames: 4
     },
 
